@@ -27,6 +27,11 @@ window.onload = function()
     return result;
   };
 
+  var mod = function(n1, n2){
+    result = parseFloat(n1) % parseFloat(n2);
+    return result;
+  };
+
   //Fields Validations
     while(isNaN(number_one) == true){
       number_one = prompt("Ingrese el primer numero");
@@ -44,14 +49,16 @@ window.onload = function()
     }
 
 
-    if(operation === "suma" || operation === "mas" || operation === "+"){
+    if(operation === "suma" || operation === "sumar" || operation === "mas" || operation === "+"){
       value = sumar(number_one,number_two);
-    }else if(operation === "resta" || operation ==="menos" || operation ==="-"){
+    }else if(operation === "resta" || operation === "restar" ||operation ==="menos" || operation ==="-"){
       value =  restar(number_one,number_two);
-    }else if(operation === "multiplicar" || operation ==="por" || operation ==="*"){
+    }else if(operation === "multiplicacion" || operation === "multiplicar" || operation ==="por" || operation ==="*"){
       value =  multiplicar(number_one,number_two);
-    }else if(operation === "dividir" || operation ==="/"){
+    }else if(operation === "division" || operation === "dividir" || operation === "dividido" || operation ==="/"){
       value =  dividir(number_one,number_two);
+    }else if(operation === "mod" || operation === "modular" || operation ==="%"){
+      value =  mod(number_one,number_two);
     }else{
       value = "Error en la operacion";
     }
